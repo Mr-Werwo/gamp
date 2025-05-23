@@ -1,6 +1,6 @@
 ADMIN_USER = {
-    "username": "gamp",
-    "password": "gamp2025"  # Du kannst auch mit gehashten Passwörtern arbeiten
+    "username": "##",
+    "password": "##"
 }
 
 JWT_SECRET = "ultra-sicheres-geheimnis"
