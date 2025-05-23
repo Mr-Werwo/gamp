@@ -1,19 +1,24 @@
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import MapView from "./pages/Map"
+import Mem from "./pages/Mem.jsx"
+import Stats from "./pages/Stats.jsx";
+import UB from "./pages/UB.jsx";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Root – automatisch weiterleiten */}
         <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* Deine bestehenden Routen */}
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/map" element={<MapView />} />
+        <Route path="/mem" element={<Mem />} />
+        <Route path="/stats" element={<Stats />} />
+        <Route path="/ub" element={<UB />} />
 
-        {/* Catch-All – alles, was nicht passt, zurück zu Login */}
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
